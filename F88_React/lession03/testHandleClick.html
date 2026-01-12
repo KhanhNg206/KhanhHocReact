@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+<script type="text/babel">
+
+    function PostItem(props, onClick){
+        console.log(props);
+        return(
+            <div>
+                <img src={props.hinhAnh} alt="ảnh lỗi"/>
+                <h1 onClick = {() => props.onClick(props)} 
+                >
+                   {props.text01}
+                </h1>
+                <p>{props.text02}</p>
+                <p>{props.text03}</p>
+            </div>
+        )
+    }
+
+    function App(){
+
+       const handleClick = (props) => {
+              console.log(props.text02)
+       }
+
+        return(
+            <div id="wapper">
+                <PostItem
+                    onClick = {handleClick}
+                    text01 = 'xin chào'
+                    text02 = 'xin lỗi'
+                    text03 = 'cảm ơn'
+                    hinhAnh = "https://up.yimg.com/ib/th/id/OIP.ZJ3s6PrdenOJ9onaWIJc6AHaEo?pid=Api&rs=1&c=1&qlt=95&w=174&h=108"
+                />
+            </div>
+        )
+    }
+
+      ReactDOM.render(<App/>, document.getElementById('root'))
+</script>
+</html>
