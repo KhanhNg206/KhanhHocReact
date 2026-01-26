@@ -8,6 +8,8 @@ import CongViec from './components/congViec';
 import ControlForm from './components/XuLyForm';
 import DigitalClock from './components/DigitalClock';
 import CallAPI from './components/CallAPI';
+import StudentManager from './components/CRUD_MiniProject/StudentManager';
+import Menu from './pages/menu';
 
 
 function App() {
@@ -48,8 +50,13 @@ const Student = {
              {/* Bài 5
    <DigitalClock /> */}
 
+              {/* Bài 6
+   <CallAPI /> */}
+             {/* Bài 7
+  <StudentManager /> */}
 
-   <CallAPI />
+  <Menu />
+
     
     </>
   )

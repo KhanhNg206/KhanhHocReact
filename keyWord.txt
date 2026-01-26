@@ -1,0 +1,31 @@
+-get version react : npm i react@17.0.2 react-dom@17.0.2
+
+-tạo project :
++cách 1 : (nặng, dùng cho project thật)
+     npx create-react-app my-app
+     cd my-app
+     npm start
+
++cách 2 : (nhẹ, dùng khi học)
+     npm create vite@latest my-app
+     cd my-app
+     npm install
+     npm run dev
+
+-chạy react :
+   +vite : npm run dev
+   +CRA : npm start
+
+-cài json server : 
+     npm install -g json-server
+-chạy json server :
+     json-server --watch db.json --port 3001
+
+-cài axios :
+     npm install axios
+
+-cài react router :
+    npm install react-router-dom
+
+
+
