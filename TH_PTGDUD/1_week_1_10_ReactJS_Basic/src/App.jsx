@@ -10,7 +10,8 @@ import DigitalClock from './components/DigitalClock';
 import CallAPI from './components/CallAPI';
 import StudentManager from './components/CRUD_MiniProject/StudentManager';
 import Menu from './pages/menu';
-
+import Cart from './components/QuanLyGioHang/Cart';
+import ProductList from './components/QuanLyGioHang/ProductList';
 
 function App() {
 const Student = {
@@ -55,7 +56,12 @@ const Student = {
              {/* Bài 7
   <StudentManager /> */}
 
-  <Menu />
+           {/* Bài 8
+  <Menu /> */}
+
+    <ProductList />
+            <hr />
+            <Cart />
 
     
     </>
