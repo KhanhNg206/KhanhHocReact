@@ -1,17 +1,13 @@
-import { useState } from 'react'
-import Counter from './components/testUseReduce/Bai01'
-import DemoLogin from './components/DemoLogin/demoLogin'
-
+import React, { useState } from "react";
+import StudentManager from "./components/StudentManager";
+import NumberList from "./components/NumberList";
 function App() {
+return (
+    <>
+    {/* <StudentManager /> */}
+    <NumberList />
+    </>
+  );
+  }
 
-  return (
-  // <>
-  //   <Counter />
-  // </>
-
-  <DemoLogin />
-   
-  )
-}
-
-export default App
+export default App;
