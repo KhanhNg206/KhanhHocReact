@@ -1,0 +1,11 @@
+.container{
+    display: flex;
+}
+
+.right{
+    flex : 1;
+}
+
+.left{
+    flex : 1;
+}
