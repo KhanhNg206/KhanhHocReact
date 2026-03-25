@@ -1,0 +1,41 @@
+[
+  {
+    "id": "123",
+    "name": "Nguyễn Văn A",
+    "email": "a@gmail.com",
+    "phone": "0901234567",
+    "address": "HCM",
+    "point": {
+      "point1": 10,
+      "point2": 4,
+      "point3": 5
+    },
+    "favou": ["dưa hấu", "sách"]
+  },
+  {
+    "id": "4565",
+    "name": "Trần Thị B",
+    "email": "b@gmail.com",
+    "phone": "0912345678",
+    "address": "Hà Nội",
+    "point": {
+      "point1": 10,
+      "point2": 4,
+      "point3": 5
+    },
+    "favou": ["dưa hấu", "sách"]
+  },
+  {
+    "id": "789",
+    "name": "Lê Văn C",
+    "email": "c@gmail.com",
+    "phone": "0923456789",
+    "address": "Đà Nẵng",
+    "point": {
+      "point1": 10,
+      "point2": 4,
+      "point3": 5
+    },
+    "favou": ["dưa hấu", "sách"]
+  }
+]

@@ -16,12 +16,11 @@ function StudentManager(){
       name: "New Student"
     };
      setStudents(prev => [...prev, newStudent]);
-  }, []);
+    }, []);
     return (
         <>
         <button onClick={AddStudent}>thêm</button>
         <StudentList students={students} onDelete={DeleteStudent} />
-
         </>
     )
 }
