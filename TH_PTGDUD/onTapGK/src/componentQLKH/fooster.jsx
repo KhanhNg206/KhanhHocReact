@@ -1,13 +1,13 @@
 function Fooster(){
     return(
         <div style={{
-            color : "white",
-            alignItems : "center",
             backgroundColor : "black",
-            padding : "20px"
+            textAlign : "center",
+            padding : "5px",
+            color : "white"
         }}>
             <p>Họ và tên : Nguyễn Hà Nhật Khanh</p>
-            <p>mssv : 23634741</p>
+            <p>Mssv : 23634741</p>
         </div>
     )
 }

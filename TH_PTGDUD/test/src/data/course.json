@@ -1,0 +1,12 @@
+[
+  { "id": 1, "title": "JavaScript nâng cao", "category": "Frontend", "price": 550000, "image": "/images/js.png" },
+  { "id": 2, "title": "TypeScript", "category": "Frontend", "price": 600000, "image": "/images/ts.png" },
+  { "id": 3, "title": "NextJS", "category": "Frontend", "price": 700000, "image": "/images/next.png" },
+  { "id": 4, "title": "ExpressJS", "category": "Backend", "price": 500000, "image": "/images/express.png" },
+  { "id": 5, "title": "NestJS", "category": "Backend", "price": 750000, "image": "/images/nest.png" },
+  { "id": 6, "title": "ASP.NET Core", "category": "Backend", "price": 800000, "image": "/images/dotnet.png" },
+  { "id": 7, "title": "Firebase", "category": "Database", "price": 400000, "image": "/images/firebase.png" },
+  { "id": 8, "title": "PostgreSQL", "category": "Database", "price": 450000, "image": "/images/postgres.png" },
+  { "id": 9, "title": "Redis", "category": "Database", "price": 500000, "image": "/images/redis.png" },
+  { "id": 10, "title": "GraphQL", "category": "Backend", "price": 650000, "image": "/images/graphql.png" }
+]

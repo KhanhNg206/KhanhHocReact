@@ -4,7 +4,7 @@ import Fooster from './componentQLKH/fooster';
 import CustomerList from './componentQLKH/CustomerList';
 import CustomerForm from './componentQLKH/CustomerForm';
 import SearchBar from './componentQLKH/SearchBar';
-import { useState, useEffect, use } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 function App() {
@@ -13,16 +13,14 @@ function App() {
   const [selectedId, setSelectedId] = useState("");
   const [editingCustomer, setEditingCustomer] = useState(null);
 
-  useEffect(() => {
+useEffect(() => {
   const local = JSON.parse(localStorage.getItem("customers"));
-
   if (Array.isArray(local)) {
     setCustomers(local);
   } else {
     axios.get("/customer.json").then(res => {
       const data = Array.isArray(res.data) ? res.data : res.data.customers;
       setCustomers(data);
-      localStorage.setItem("customers", JSON.stringify(data));
     });
   }
 }, []);
@@ -30,14 +28,12 @@ function App() {
   const handleAdd = (customer) => {
   const newList = [...customers, { ...customer, id: customers.length + 1 }];
   setCustomers(newList);
-  localStorage.setItem("customers", JSON.stringify(newList));
 };
 
 const handleDelete = (id) => {
   if(window.confirm("chắc chắn xóa?")){
     const newList = customers.filter(c => c.id !== id);
     setCustomers(newList);
-    localStorage.setItem("customers",JSON.stringify(newList));
   }
 };
 
@@ -51,7 +47,6 @@ const handleUpdate = (updatedCustomer) => {
   );
 
   setCustomers(newList);
-  localStorage.setItem("customers", JSON.stringify(newList));
   setEditingCustomer(null); 
 };
 

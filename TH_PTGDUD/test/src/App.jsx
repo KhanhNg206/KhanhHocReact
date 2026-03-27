@@ -1,26 +1,40 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Layout from "./components/Layout";
-
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Product from "./pages/Product";
-import ProductDetail from "./pages/ProductDetail";
+import { useState,useEffect } from 'react'
+import Header from './components/Header'
+import Fooster from './components/Fooster'
+import axios from 'axios'
+import RegisterList from './components/RegisterList'
+import React from 'react'
 
 function App() {
-    return (
-        <Router>
-            <Layout>
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="/product" element={<Product />} />
-                    <Route path="/product/:id" element={<ProductDetail />} />
-                </Routes>
-            </Layout>
-        </Router>
-    );
-}
+  const [register,setRegister] = useState([]);
+  const [keyword,setKeyword] = useState("");
 
+
+  useEffect(() => {
+  const local = JSON.parse(localStorage.getItem("register"));
+
+  if (Array.isArray(local)) {
+    setRegister(local);
+  } else {
+    axios.get("data/course.json").then(res => {
+      const data = Array.isArray(res.data) ? res.data : res.data.register;
+      setRegister(data);
+      localStorage.setItem("register", JSON.stringify(data));
+    });
+  }
+}, []);
+
+ const filterRegister = register.filter(c => {
+  return c.title?.toLowerCase().includes(keyword.toLowerCase());
+});
+
+  return (
+    <>
+    <Header />
+    <RegisterList register={filterRegister}/>
+    <Fooster />
+      
+    </>
+  )
+}
 export default App;

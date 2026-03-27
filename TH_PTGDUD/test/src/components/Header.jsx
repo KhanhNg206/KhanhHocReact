@@ -1,19 +1,13 @@
-import { Link } from "react-router-dom";
-import "./header.css";
-
-function Header() {
-    return (
-        <header className="header">
-            <h2 className="logo">My Website</h2>
-
-            <nav>
-                <Link to="/">Home</Link>
-                <Link to="/product">Product</Link>
-                <Link to="/about">About</Link>
-                <Link to="/contact">Contact</Link>
-            </nav>
-        </header>
-    );
+function Header(){
+    return(
+        <div style={{
+            alignItems: "center",
+            color : "white",
+            backgroundColor : "black",
+            padding : "20px"
+        }}>
+            <h1>Hệ thống đăng kí khóa học trực tuyến</h1>
+        </div>
+    )
 }
-
 export default Header;
